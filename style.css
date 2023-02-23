@@ -1,0 +1,161 @@
+/* ### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+  background-size: cover;
+  background-color: hsl(0, 100%, 74%);
+  background-blend-mode: multiply;
+  opacity: 1;
+  padding: 3.125rem 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+}
+.intro {
+  text-align: center;
+}
+.intro-title {
+  margin-bottom: 1.25rem;
+}
+.intro-description {
+  color: #eee;
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+.cta-title {
+  padding: 0.9375rem 3.125rem;
+  background-color: hsl(248, 31%, 33%);
+  border-radius: 0.5625rem;
+  text-align: center;
+}
+.cta-title span {
+  color: #eee;
+}
+#form {
+  background-color: #fff;
+  padding: 0.9375rem;
+  border-radius: 0.5625rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9375rem;
+}
+input {
+  padding: 0.9375rem;
+  border: 1px solid #eee;
+  border-radius: 0.5625rem;
+  width: 100%;
+}
+input::placeholder {
+  font-family: Poppins;
+  font-weight: 500;
+}
+.btn-form {
+  padding: 1.25rem;
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  border-radius: 0.5625rem;
+  font-family: Poppins;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.btn-form:hover {
+  background-color: hsl(154, 91%, 62%);
+}
+.terms {
+  display: block;
+  padding: 0.9375rem;
+  color: rgb(201, 201, 201);
+  font-size: 0.75rem;
+}
+.terms .pink {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+.input-control input:focus {
+  outline: 0;
+}
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+  text-align: right;
+}
+@media (min-width: 37.5em) {
+  body {
+    min-height: 100vh;
+  }
+  .container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.25rem;
+  }
+  .intro {
+    align-self: center;
+    max-width: 31.25rem;
+  }
+  .intro-title {
+    font-size: 3rem;
+  }
+  .cta {
+    max-width: 31.25rem;
+  }
+  footer {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
